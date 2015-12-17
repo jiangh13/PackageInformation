@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by a on 15/12/17.
@@ -51,7 +52,7 @@ public class MyAdapter extends BaseAdapter{
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = View.inflate(context, R.layout.list_item,null);
+            convertView = View.inflate(context,R.layout.list_item,null);
             holder.image = (ImageView) convertView.findViewById(R.id.ItemImage);
             holder.title = (TextView) convertView.findViewById(R.id.ItemTitle);
             holder.text = (TextView) convertView.findViewById(R.id.ItemText);
@@ -93,7 +94,7 @@ public class MyAdapter extends BaseAdapter{
                 mFilteredArrayList.clear();
                 for(Iterator<AppInfo> iterator=myAppInfoForeverList.iterator();iterator.hasNext();){
                     AppInfo name=iterator.next();
-                    if(name.appName.contains(charSequence)){
+                    if(name.appName.toLowerCase().contains(charSequence.toString().toLowerCase())){
                         mFilteredArrayList.add(name);
                     }
                 }

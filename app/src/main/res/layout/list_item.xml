@@ -2,19 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/ItemImage"
         android:layout_width="38dp"
-        android:layout_height="38dp">
-    </ImageView>
+        android:layout_height="38dp"
+        android:layout_alignTop="@+id/ItemText"></ImageView>
 
     <TextView
         android:id="@+id/ItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ItemImage"
-        android:textSize="25sp" >
-    </TextView>
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="25sp"
+        android:text="title"></TextView>
 
     <TextView
         android:id="@+id/ItemText"
@@ -22,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ItemImage"
         android:layout_below="@id/ItemTitle"
-        android:textSize="15sp" >
-    </TextView>
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="15sp"
+        android:text="this is the text"></TextView>
 </RelativeLayout>

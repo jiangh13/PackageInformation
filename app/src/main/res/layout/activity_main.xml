@@ -16,10 +16,17 @@
         android:textSize="12sp"
         android:imeOptions="actionSearch"
         android:hint="Searching..."/>
+    <ImageButton
+        android:id="@+id/searchclear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_input_delete"
+        android:visibility="gone"
+        />
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchbox"
-        />
+        android:layout_below="@id/searchbox"/>
 </RelativeLayout>
